@@ -88,7 +88,9 @@ class VueAdapter extends Adapter {
 		const transpiledScript = typescript.transpileModule(component.script.content, {
 			compilerOptions: {
 				module: typescript.ModuleKind.CommonJS,
-				esModuleInterop: true
+				esModuleInterop: true,
+				sourceMap: true,
+				inlineSourceMap: true
 			}
 		});
 
