@@ -89,9 +89,9 @@ class VueAdapter extends Adapter {
 			compilerOptions: {
 				module: typescript.ModuleKind.CommonJS,
 				esModuleInterop: true,
-				sourceMap: true,
 				inlineSourceMap: true
-			}
+			},
+			fileName: path
 		});
 
 		return transpiledScript.outputText;
